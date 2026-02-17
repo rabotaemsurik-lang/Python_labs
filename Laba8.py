@@ -56,21 +56,26 @@ class Car:
 class Dog:
     mammal = True
 
-    def __init__(self, name, age, nature="Good", breed="Unknown"):
+    def init(self, name, age, nature="Good", breed="Unknown"):
         self.name = name
         self.age = age
         self.nature = nature
         self.breed = breed
 
+    def get_info(self):
+        return f"Name: {self.name}, Age: {self.age}, Nature: {self.nature}, Breed: {self.breed}"
+
     def show_info(self):
-        print(f"Name: {self.name}, Age: {self.age}, Nature: {self.nature}, Breed: {self.breed}")
+        print(self.get_info())
 
     def bark(self):
         print(f"{self.name} says: Woof!")
 
+
 class Labrador(Dog):
     def fetch(self):
         print(f"{self.name} is fetching the ball!")
+
 
 class Bulldog(Dog):
     def snore(self):
