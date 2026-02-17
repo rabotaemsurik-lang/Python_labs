@@ -9,17 +9,17 @@ class Bank:
 
     def deposit(self, amount):
         self.__balance += amount
-        print(f"Додано {amount}, новий баланс: {self.__balance}")
+        return self.__balance
 
     def withdraw(self, amount):
-        if amount <= self.__balance:
-            self.__balance -= amount
-            print(f"Знято {amount}, новий баланс: {self.__balance}")
-        else:
-            print("Недостатньо коштів!")
+        if amount > self.__balance:
+            raise ValueError("Недостатньо коштів!")
+        self.__balance -= amount
+        return self.__balance
 
     def get_balance(self):
         return self.__balance
+
 
 
 
@@ -248,11 +248,11 @@ while True:
 
     choice = input("Ваш вибір: ")
 
-    if choice == "1":
-        bank = Bank(1000)
-        bank.deposit(500)
-        bank.withdraw(200)
-        print(f"Поточний баланс: {bank.get_balance()}")
+if choice == "1":
+    bank = Bank(1000)
+    print(f"Новий баланс після поповнення: {bank.deposit(500)}")
+    print(f"Новий баланс після зняття: {bank.withdraw(200)}")
+    print(f"Поточний баланс: {bank.get_balance()}")
 
     elif choice == "2":
         coin = Coin()
