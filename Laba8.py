@@ -183,7 +183,14 @@ class Discount(Shop):
 
 
 class User:
-    def __init__(self, first_name, last_name, email="", nickname="", subscribe=False):
+    def init(self, first_name, last_name, email="", nickname="", subscribe=False):
+
+        if not first_name or not last_name:
+            raise ValueError("First name and last name cannot be empty.")
+
+        if email and "@" not in email:
+            raise ValueError("Invalid email address.")
+
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
@@ -198,10 +205,10 @@ class User:
         print(f"Hello, {self.first_name}!")
 
     def increment_login_attempts(self):
-        self.login_attempts +=1
+        self.login_attempts += 1
 
     def reset_login_attempts(self):
-        self.login_attempts =0
+        self.login_attempts = 0
 
 class Privileges:
     def __init__(self, privileges):
