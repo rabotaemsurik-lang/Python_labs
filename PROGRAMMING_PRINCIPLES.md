@@ -32,20 +32,25 @@ SOLID Principles
 S — Single Responsibility
 
 Bank — фінансові операції:
+[Laba8.py#L4](./Laba8.py#L4)
 https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L4
 
 Buffer — тільки буфер і обчислення сум:
+[Laba8.py#L77](./Laba8.py#L77)
 https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L77
 O — Open/Closed
 Класи-нащадки розширюють базові класи без зміни їхнього коду:
 Наслідування Dog уLabrador, Bulldog
 L — Liskov Substitution
 Підставляння об’єктів-наступників (Labrador, Bulldog) у місцях, де очікується Dog:
+[Laba8.py#L4](./Laba8.py#L70)
 https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L70
 I — Interface Segregation
 Окремий клас Privileges для привілеїв адміністратора:
+[Laba8.py#L187](./Laba8.py#L187)
 https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L187
 Це допомагає не перевантажувати клас Admin.
 D — Dependency Inversion
 Клас Pets залежить не від конкретної реалізації (Labrador, Bulldog, Dog), а від наявності методу show_info():
+[Laba8.py#L35](./Laba8.py#L35)
 https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L35
