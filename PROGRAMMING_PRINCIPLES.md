@@ -25,3 +25,27 @@
 ## Обробка винятків
 Користувача виняток:
 [Laba8.py#L100-L105](./Laba8.py#L100-L105)
+
+
+
+SOLID Principles
+S — Single Responsibility
+
+Bank — фінансові операції:
+https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L4
+
+Buffer — тільки буфер і обчислення сум:
+https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L77
+O — Open/Closed
+Класи-нащадки розширюють базові класи без зміни їхнього коду:
+Наслідування Dog уLabrador, Bulldog
+L — Liskov Substitution
+Підставляння об’єктів-наступників (Labrador, Bulldog) у місцях, де очікується Dog:
+https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L70
+I — Interface Segregation
+Окремий клас Privileges для привілеїв адміністратора:
+https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L187
+Це допомагає не перевантажувати клас Admin.
+D — Dependency Inversion
+Клас Pets залежить не від конкретної реалізації (Labrador, Bulldog, Dog), а від наявності методу show_info():
+https://github.com/rabotaemsurik-lang/Python_labs/blob/laba8/Laba8.py#L35
